@@ -238,7 +238,7 @@ main {
 
 @media screen and (max-width: 650px) {
   main {
-    top: 20px;
+    top: 30px;
   }
 }
 
@@ -249,7 +249,8 @@ main {
 
 #content-container {
   position: relative;
-  max-width: 84vw;
+  top: 5vh;
+  max-width: 90vw;
 }
 
 #content-container::before,
@@ -318,12 +319,12 @@ main {
 
 @media screen and (max-width: 600px) {
   #blob_1 {
-    transform: translate(20%, -20%);
+    transform: translate(20%, 10%);
     fill: var(--clr-orange);
   }
 
   #blob_2 {
-    transform: translate(65%, 40%);
+    transform: translate(65%, 60%);
     fill: var(--clr-neonBlue);
   }
 }

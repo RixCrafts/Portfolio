@@ -1,0 +1,90 @@
+:root {
+  --clr-mainBackground: hsla(244, 31%, 10%, 1);
+  --clr-neonBlue: hsl(205, 100%, 53%);
+  --clr-ligthBlue: hsl(205, 100%, 80%);
+  --clr-orange: hsla(33, 100%, 50%, 1);
+
+  --ff-main: 'Trebuchet MS',
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--clr-mainBackground);
+}
+
+header {
+  outline: 2px solid green;
+  width: 100vw;
+  height: 15vh;
+  max-height: 20vh;
+  position: relative;
+  top: 0;
+}
+
+.header-background {
+  width: 100vw;
+  position: absolute;
+  top: 15vh;
+  left: 0;
+  z-index: 0;
+
+  fill: none;
+  stroke-width: 5px;
+  stroke: var(--clr-neonBlue);
+}
+
+#header-background__effect {
+  filter: blur(5px);
+}
+
+@media screen and (min-width: 600px) {
+  .header-background {
+    top: 0;
+    stroke-width: 1;
+  }
+}
+
+/* Nav */
+
+nav {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__item-container,
+.picture-container {
+  outline: 2px solid red;
+  flex-basis: 30vw;
+}
+
+/* Picture */
+
+.picture-container .picture-path-group {
+  fill: none;
+  stroke-width: 10px;
+  stroke: var(--clr-neonBlue);
+}
+
+@media screen and (min-width:600px) {
+  .picture-container {
+    flex-basis: 20vw;
+    align-self: flex-start;
+  }
+}
+
+/* Sides */
