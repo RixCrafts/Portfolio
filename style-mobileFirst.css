@@ -39,6 +39,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: var(--clr-mainBackground);
+  font-family: var(--ff-main);
 }
 
 /* -------------------------------- Header --------------------------------- */
@@ -154,7 +155,7 @@ nav {
   justify-content: center;
   align-items: center;
   color: var(--clr-neonBlue);
-  font-family: var(--ff-main);
+  /*font-family: var(--ff-main);*/
   font-size: .75rem;
   font-weight: 900;
   line-height: 1;
@@ -243,7 +244,7 @@ nav {
 }
 
 .pageLink-item {
-  font-family: var(--ff-main);
+  /*font-family: var(--ff-main);*/
   font-size: 2.5em;
   transition: transform linear 150ms;
 }
@@ -312,7 +313,7 @@ main {
   padding-top: 5vh;
   display: grid;
   grid-template-columns: 10vw 1fr 10vw;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 1fr 2fr .15fr .95fr .15fr;
 }
 
 #greetings-page {
@@ -346,15 +347,17 @@ main {
 }
 
 #greetings-page::before {
-  left: .8em;
+  /* left: .8em; */
+  left: 4%;
 }
 
 #greetings-page::after {
-  right: .8em;
+  /* right: .8em; */
+  right: 4%;
 }
 
 #greetings {
-  font-family: var(--ff-main);
+  /*font-family: var(--ff-main);*/
   font-size: 1.5em;
   text-align: center;
   margin: 1em 0;
@@ -381,7 +384,7 @@ main {
   display: inline-block;
   width: 100%;
   text-align: center;
-  font-family: var(--ff-main);
+  /*font-family: var(--ff-main);*/
   font-weight: 900;
   margin: 1em 0;
   text-shadow:
@@ -488,7 +491,7 @@ main {
   border-style: dotted;
 }
 
-#visualWidget-1{
+#visualWidget-1 {
   border-radius: 95% 0 95% 0;
   animation-name: petal-1__animation;
   animation-timing-function: linear;
@@ -509,7 +512,7 @@ main {
   border-style: solid;
 }
 
-#visualWidget-3{
+#visualWidget-3 {
   animation: line-horizontal linear 5s infinite alternate;
 }
 
@@ -530,7 +533,7 @@ main {
   border-radius: 5px;
 }
 
-#visualWidget-5{
+#visualWidget-5 {
   animation: border-horizontal linear 5s infinite alternate;
 }
 
@@ -553,37 +556,43 @@ main {
 
 @keyframes petal-2__animation {
 
-  0%{
+  0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
 @keyframes line-vertical {
-  0%{
+  0% {
     transform: rotate(45deg);
   }
-  100%{
+
+  100% {
     transform: rotate(135deg);
   }
 }
 
 @keyframes line-horizontal {
-  0%{
+  0% {
     transform: rotate(-45deg);
   }
-  100%{
+
+  100% {
     transform: rotate(45deg);
   }
 }
 
 @keyframes border-horizontal {
-  0%, 100%{
+
+  0%,
+  100% {
     transform: scaleX(2);
   }
-  50%{
+
+  50% {
     transform: scaleX(1);
   }
 }
@@ -602,20 +611,187 @@ main {
 
 /* --------------------------------------------------------------------------------- */
 
+/* ------------------------------ About me  ---------------------------------- */
+.about-me {
+  padding: 0 1rem;
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  /* background-color: var(--clr-neonBlue); */
+}
+
+.about-me>h2 {
+  color: var(--clr-ligthBlue);
+  margin-bottom: 1rem;
+}
+
+.about-me>p {
+  margin: 1rem 0;
+}
+
+.about-me>p:nth-child(2),
+.about-me>p:nth-child(5) {
+  text-align: center;
+}
+
+.about-me>p:nth-child(2)>span,
+.about-me>p:nth-child(5)>span {
+  font-size: 3rem;
+  display: block;
+}
+
+.about-me>p:nth-child(2)>b {
+  color: var(--clr-orange);
+}
+
+.about-me>p:nth-child(7) {
+  color: var(--clr-neonBlue);
+}
+
+.connect-container,
+.colab-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.connect-container {
+  border-top: 1px solid var(--clr-ligthBlue);
+  border-right: 1px solid var(--clr-ligthBlue);
+  border-bottom: 1px solid var(--clr-ligthBlue);
+  border-radius: 0 10px 10px 0;
+}
+
+.connect-container i,
+.colab-container i,
+.belt i {
+  font-size: 2rem;
+}
+
+.colab-container {
+  border-top: 1px solid var(--clr-ligthBlue);
+  border-left: 1px solid var(--clr-ligthBlue);
+  border-bottom: 1px solid var(--clr-ligthBlue);
+  border-radius: 10px 0 0 10px;
+}
+
+/* .belt {
+  border-top: 1px solid var(--clr-ligthBlue);
+  border-left: 1px solid var(--clr-ligthBlue);
+  border-right: 1px solid var(--clr-ligthBlue);
+  border-radius: 10px 10px 0 10px;
+} */
+
+#certifications-fildset{
+  border-color: var(--clr-ligthBlue);
+  border-radius: 10px;
+}
+
+#certifications-fildset > legend{
+  font-size: 1.5rem;
+}
+
+.certifications{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.certifications a{
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* -------------------------------------------------------------------------- */
+
 #left-side__container {
-  background-color: aqua;
-  grid-column: 1;
-  grid-row: 2 / span 3;
+  /* background-color: aqua; */
+  grid-column: 1 / span 3;
+  grid-row: 3;
+  max-height: 10vh;
+  border-bottom: 4px solid var(--clr-neonBlue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#tech-list,
+#projectType-list {
+  /* outline: 1px solid red; */
+  padding: .5rem 1rem;
+  list-style: none;
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(var(--clr-mainBackground), hsla(205, 100%, 50%, 0.094), var(--clr-mainBackground));
 }
 
 #content-container {
-  background-color: aquamarine;
-  grid-column: 2;
-  grid-row: 2 / span 3
+  /* background-color: #30395d; */
+  grid-column: 1 / span 3;
+  grid-row: 4;
+  max-height: 80vh;
+  overflow-y: scroll;
 }
 
 #right-side__container {
-  background-color: blueviolet;
-  grid-column: 3;
-  grid-row: 2 / span 3
+  /* background-color: blueviolet; */
+  grid-column: 1 / span 3;
+  grid-row: 5;
+  max-height: 10vh;
+  border-top: 1px solid var(--clr-neonBlue);
+}
+
+#projectType-list {
+  font-size: 3rem;
+  color: var(--clr-ligthBlue);
+}
+
+/* #item__app{
+  font-size: .5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 25vw;
+} */
+
+
+
+
+
+@media screen and (min-width:600px) {
+  #left-side__container {
+    grid-column: 1;
+    grid-row: 2 / span 3;
+  }
+
+  #content-container {
+    grid-column: 2;
+    grid-row: 2 / span 3
+  }
+
+  #right-side__container {
+    grid-column: 3;
+    grid-row: 2 / span 3
+  }
+}
+
+/* ------------------------------------ Footer ------------------------------- */
+
+footer {
+  font-size: .75rem;
+  /*font-family: var(--ff-main);*/
+  text-align: center;
+  color: var(--clr-ligthBlue);
+  opacity: .5;
 }
