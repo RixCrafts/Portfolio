@@ -42,6 +42,13 @@ body {
   font-family: var(--ff-main);
 }
 
+.zero-stats{
+  filter: grayscale(100%);
+  opacity: .25;
+  cursor: none;
+  touch-action: none;
+}
+
 /* -------------------------------- Header --------------------------------- */
 
 header {
@@ -683,13 +690,15 @@ main {
   border-radius: 10px 10px 0 10px;
 } */
 
-#certifications-fildset{
+fieldset{
   border-color: var(--clr-ligthBlue);
   border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
-#certifications-fildset > legend{
-  font-size: 1.5rem;
+legend{
+  font-size: 1.25rem;
+  /* width: 100%; */
 }
 
 .certifications{
@@ -697,6 +706,12 @@ main {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.certifications hr{
+  width: 30%;
+  margin: 1rem 0
 }
 
 .certifications a{
@@ -708,6 +723,14 @@ main {
   align-items: center;
   justify-content: center;
 
+}
+
+.sololearn-cert,
+#sololearn-svg1,
+#sololearn-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -735,13 +758,7 @@ main {
   background: linear-gradient(var(--clr-mainBackground), hsla(205, 100%, 50%, 0.094), var(--clr-mainBackground));
 }
 
-#content-container {
-  /* background-color: #30395d; */
-  grid-column: 1 / span 3;
-  grid-row: 4;
-  max-height: 80vh;
-  overflow-y: scroll;
-}
+
 
 #right-side__container {
   /* background-color: blueviolet; */
@@ -765,10 +782,6 @@ main {
   max-width: 25vw;
 } */
 
-
-
-
-
 @media screen and (min-width:600px) {
   #left-side__container {
     grid-column: 1;
@@ -784,6 +797,15 @@ main {
     grid-column: 3;
     grid-row: 2 / span 3
   }
+}
+
+/* ------------------------ Project Collection ----------------------- */
+#content-container {
+  /* background-color: #30395d; */
+  grid-column: 1 / span 3;
+  grid-row: 4;
+  max-height: 80vh;
+  overflow-y: scroll;
 }
 
 /* ------------------------------------ Footer ------------------------------- */
