@@ -1,0 +1,372 @@
+:root {
+  --clr-mainBackground: hsla(244, 31%, 10%, 1);
+  --clr-neonBlue: hsl(205, 100%, 53%);
+  --clr-ligthBlue: hsl(205, 100%, 80%);
+  --clr-orange: hsla(33, 100%, 50%, 1);
+  --clr-linkedin: rgb(10, 102, 194);
+
+  --ff-main: 'Trebuchet MS',
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
+
+  /* For the charts */
+  --clr-html: #f06529;
+  --clr-css: #264de4;
+  --clr-js: #f7df1e;
+  --amount-js: 25%;
+
+  --clr-react: #61dbfb;
+  --amount-react: 25%;
+
+  --clr-csharp: #682876;
+  --amount-csharp: 25%;
+
+  --clr-python: #f06529;
+  --amount-python: 25%;
+
+  --amount-type-web: 40%;
+  --amount-type-app: 30%;
+  --amount-type-game: 30%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--clr-mainBackground);
+  font-family: var(--ff-main);
+}
+
+.zero-stats {
+  filter: grayscale(100%);
+  opacity: .25;
+  cursor: none;
+  touch-action: none;
+}
+
+/* -------------------- Header -------------------- */
+
+header {
+  width: 100vw;
+  height: 15vh;
+  max-height: 20vh;
+  position: relative;
+  top: 0;
+}
+
+.header-background {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  fill: none;
+  stroke: var(--clr-neonBlue);
+}
+
+#header-background__effect {
+  filter: blur(5px);
+}
+
+/* ------------------- Nav ---------------- */
+
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Picture -------- */
+.menu-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all linear 250ms;
+}
+
+.menu-container svg {
+  position: relative;
+  flex-basis: 45%;
+  z-index: 0;
+}
+
+.menu-container .menu-path-group {
+  fill: none;
+  stroke-width: 10px;
+  stroke: var(--clr-neonBlue);
+}
+
+#menu-btn{
+  display: none;
+}
+
+.menu-slide{
+  display: none;
+}
+
+.header__item-container {
+  display: none;
+}
+
+/* ---------- Main -------- */
+
+main {
+  color: aliceblue;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding-top: 5vh;
+  display: grid;
+  grid-template-columns: 10vw 1fr 10vw;
+  grid-template-rows: 1fr 2fr .15fr .95fr .15fr;
+}
+
+#greetings-page {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#greetings-page__content-container {
+  margin-top: 10px;
+  background: linear-gradient(transparent, rgb(25, 23, 54), transparent);
+  width: 85%;
+  padding: 0 0.25rem;
+  border-left: 2px solid var(--clr-neonBlue);
+  border-right: 2px solid var(--clr-neonBlue);
+}
+
+#greetings-page::before,
+#greetings-page::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--clr-ligthBlue);
+  position: absolute;
+  border-radius: 1px;
+  top: 10px;
+}
+
+#greetings-page::before {
+  left: 4%;
+}
+
+#greetings-page::after {
+  right: 4%;
+}
+
+#greetings {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 1em 0;
+  text-shadow:
+    5px 0 5px var(--clr-neonBlue),
+    0 5px 5px var(--clr-neonBlue),
+    -5px 0 5px var(--clr-neonBlue),
+    0 -5px 5px var(--clr-neonBlue);
+}
+
+#greetings span {
+  color: var(--clr-orange);
+  font-size: 1.5em;
+  font-weight: 900;
+  text-shadow: none
+}
+
+#dots {
+  color: var(--clr-orange);
+  font-size: 2em;
+}
+
+#rol {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  margin: 1em 0;
+  text-shadow:
+    5px 0 5px var(--clr-neonBlue),
+    0 5px 5px var(--clr-neonBlue),
+    -5px 0 5px var(--clr-neonBlue),
+    0 -5px 5px var(--clr-neonBlue);
+}
+
+#rol span {
+  color: var(--clr-orange);
+  text-shadow:
+    5px 0 5px var(--clr-ligthBlue),
+    0 5px 5px var(--clr-ligthBlue),
+    -5px 0 5px var(--clr-ligthBlue),
+    0 -5px 5px var(--clr-ligthBlue);
+}
+
+#myPicture-visualWidget__container,
+#myPicture-visualWidget__inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#myPicture-visualWidget__inner-container {
+  width: 9rem;
+  height: 9rem;
+  top: 30px;
+}
+
+.inner-visualWidget {
+  border-color: var(--clr-neonBlue);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+#visualWidget-1,
+#visualWidget-2 {
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: dotted;
+}
+
+#visualWidget-1 {
+  border-radius: 95% 0 95% 0;
+  animation-name: petal-1__animation;
+  animation-timing-function: linear;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+}
+
+#visualWidget-2 {
+  border-radius: 0 95% 0 95%;
+  animation: petal-2__animation linear 10s infinite;
+}
+
+#visualWidget-3,
+#visualWidget-4 {
+  width: 100%;
+  height: 0;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#visualWidget-3 {
+  animation: line-horizontal linear 5s infinite alternate;
+}
+
+#visualWidget-4 {
+  transform: rotate(90deg);
+  animation: line-vertical linear 5s infinite alternate;
+}
+
+#visualWidget-5,
+#visualWidget-6 {
+  width: 50px;
+  height: 100%;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+#visualWidget-5 {
+  animation: border-horizontal linear 5s infinite alternate;
+}
+
+#visualWidget-6 {
+  transform: rotate(90deg);
+  animation: border-vertical linear 5s infinite alternate;
+}
+
+@keyframes petal-1__animation {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes petal-2__animation {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes line-vertical {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes line-horizontal {
+  0% {
+    transform: rotate(-45deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes border-horizontal {
+
+  0%,
+  100% {
+    transform: scaleX(2);
+  }
+
+  50% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes border-vertical {
+
+  0%,
+  100% {
+    transform: rotate(135deg);
+  }
+
+  50% {
+    transform: rotate(225deg);
+  }
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */

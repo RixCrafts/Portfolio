@@ -10,9 +10,13 @@ body.onscroll = event => {
   if(window.scrollY > 20){
     navBtn.classList.add("small-menu");
     navBar.classList.add("small-nav");
+
+    navBar.classList.add('nav-bg');
   }else{
     navBtn.classList.remove("small-menu");
     navBar.classList.remove("small-nav");
+
+    navBar.classList.remove('nav-bg');
   }
 }
 

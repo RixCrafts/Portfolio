@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Richard's Portfolio</title>
 
-  <!-- <link rel="stylesheet" href="style.css"> -->
-  <link rel="stylesheet" href="style-mobileFirst.css">
+  <link rel="stylesheet" href="style-general.css">
+  <link rel="stylesheet" href="style-mobile.css" media="(max-width: 600px)">
+  <link rel="stylesheet" href="style-desktop.css" media="(min-width: 600px)">
   <script src="https://kit.fontawesome.com/6357d3066f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -486,13 +487,6 @@
               
             </div>
           </fieldset>
-          <!-- 
-            cssbattle.dev
-            codewars.com
-            frontendmentor.io
-            leetcode.com
-            exercism.org
-           -->
         </div>
       </div>
     </div>
@@ -523,8 +517,16 @@
       </ul>
     </aside>
     <div id="project-gallerie">
-      <!-- <div id="content-container-inner"></div> -->
-
+      <div class="gallerie-container">
+        <div class="gallerie-set-1">
+          <div class="gallerie-item-left"></div>
+          <div class="gallerie-item-right"></div>
+        </div>
+        <div class="gallerie-set-2">
+          <div class="gallerie-item-right"></div>
+          <div class="gallerie-item-left"></div>
+        </div>
+      </div>
     </div>
     <aside id="right-side__container">
       <ul id="projectType-list" class="project-categories">
