@@ -809,6 +809,91 @@ legend {
 
 /* -------------------------------------------------------------------------- */
 
+/* -------- CODING SITES --------- */
+
+.coding-site__content-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.coding-site{
+  position: relative;
+  border: 2px solid var(--clr-ligthBlue);
+  border-radius: 10px;
+  min-width: 100px;
+  min-height: 150px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coding-site a{
+  text-decoration: none;
+  color: var(--clr-ligthBlue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coding-site__top{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.coding-site__title{
+  font-size: 1rem;
+}
+
+.coding-site__top i{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: .75rem;
+}
+
+.coding-site__middle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.coding-site__middle img{
+  width: 50px;
+}
+
+.coding-site__bottom{
+  text-align: center;
+}
+
+#exercism__reputation-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#exercism__reputation-icon{
+  filter: invert();
+  width: 50px;
+  margin: 5px;
+}
+
+
+
+.coding-site__rank img{
+  width: 100%;
+}
+
+
+/* ------------------------------- */
+
 #left-side__container {
   /* background-color: aqua; */
   grid-column: 1 / span 3;
