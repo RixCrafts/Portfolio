@@ -45,15 +45,9 @@
               <i class="fa-brands fa-square-github"></i>
             </a></li>
         </ul>
-
-        <div class="left-menu__container">
-          <div class="left-menu">
-            <span>SOCIALs</span>
-          </div>
-        </div>
       </div>
 
-      <div class="picture-container">
+      <div class="menu-container">
         <svg viewBox="0 0 800 900">
           <defs>
             <filter id="neon-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox"
@@ -71,23 +65,24 @@
               <stop offset="90%" stop-color="transparent" />
             </radialGradient>
           </defs>
-          <g class="picture-path-group">
-            <path class="picture-paths" id="picture-path-main"
-              d="M400.0000305175781 102.08767700195312L658.0000470036117 251.04383875565213V548.9561622630501L400.0000305175781 697.9123240167492L142.0000140315446 548.9561622630501V251.04383875565213L400.0000305175781 102.08767700195312Z "
-              fill="url(#picture-container-radialGradient)">
+          <g class="menu-path-group">
+            
+            <path class="menu-paths" id="menu-path-main"
+              d="M400.0000305175781 102.08767700195312L658.0000470036117 251.04383875565213V548.9561622630501L400.0000305175781 697.9123240167492L142.0000140315446 548.9561622630501V251.04383875565213L400.0000305175781 102.08767700195312Z ">
             </path>
-            <path class="picture-paths" id="picture-path-1"
+            <path class="menu-paths" id="menu-path-1"
               d="M400.0000305175781 102.08767700195312L658.0000470036117 251.04383875565213V548.9561622630501L400.0000305175781 697.9123240167492L142.0000140315446 548.9561622630501V251.04383875565213L400.0000305175781 102.08767700195312Z "
               filter="url(#neon-filter)"></path>
-            <path class="picture-paths" id="picture-path-2"
+            <path class="menu-paths" id="menu-path-2"
               d="M432.0000305175781 102.08767700195312L690.0000470036117 251.04383875565213V548.9561622630501L432.0000305175781 697.9123240167492L174.0000140315446 548.9561622630501V251.04383875565213L432.0000305175781 102.08767700195312Z "
               filter="url(#neon-filter-2)" opacity="1"></path>
-            <path class="picture-paths" id="picture-path-3"
+            <path class="menu-paths" id="menu-path-3"
               d="M368.0000305175781 102.08767700195312L626.0000470036117 251.04383875565213V548.9561622630501L368.0000305175781 697.9123240167492L110.0000140315446 548.9561622630501V251.04383875565213L368.0000305175781 102.08767700195312Z "
               filter="url(#neon-filter-2)" opacity="1"></path>
-
           </g>
         </svg>
+
+        <button id="menu-btn" type="button"></button>
       </div>
 
       <div class="header__item-container right">
@@ -108,12 +103,6 @@
             </a>
           </li>
         </ul>
-
-        <div class="right-menu__container">
-          <div class="right-menu">
-            <span>MENU</span>
-          </div>
-        </div>
       </div>
 
     </nav>
@@ -132,21 +121,10 @@
           <p>Web Developer</p>
         </div>
 
-        <!-- <div id="stats-container">
-          <div id="external-chart">
-            <div id="chart-separator">
-              <div id="internal-chart">
-                <div id="central-space">
-                  P = 10
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
+        
 
-        <!-- Temp Visual Widget -->
-        <div id="stats-temp-visualWidget__container">
-          <div id="stats-temp-visualWidget__inner-container">
+        <div id="myPicture-visualWidget__container">
+          <div id="myPicture-visualWidget__inner-container">
             <div class="inner-visualWidget" id="visualWidget-1"></div>
             <div class="inner-visualWidget" id="visualWidget-2"></div>
             <div class="inner-visualWidget" id="visualWidget-3"></div>
@@ -154,8 +132,9 @@
             <div class="inner-visualWidget" id="visualWidget-5"></div>
             <div class="inner-visualWidget" id="visualWidget-6"></div>
           </div>
+          <img id="myPicture" src="./resources/picture/me.jpg" width="100%" alt="Picture of Richard">
         </div>
-        <!-- ----------------- -->
+
       </div>
     </div>
 
@@ -167,17 +146,25 @@
       <div class="connect-container">
         <!--TODO: List all the comunities that i'm part off, scroll horizontally -->
         <div class="linkedin-container">
-          <i class="fa-brands fa-linkedin-in"></i>
+          <a href="https://www.linkedin.com/in/richard-garcía-5a089a202/">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
         </div>
         <div class="twitter-container">
-          <i class="fa-brands fa-twitter"></i>
+          <a href="https://twitter.com/Richard_RixDev">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
         </div>
         <div class="mail-container">
-          <i class="fa-solid fa-at"></i>
+          <a href="mailto:">
+            <i class="fa-solid fa-at"></i>
+          </a>
         </div>
-        <div class="slack-container">
-          <i class="fa-brands fa-slack"></i>
-        </div>
+        <!-- <div class="slack-container">
+          <a href="http://">
+            <i class="fa-brands fa-slack"></i>
+          </a>
+        </div> -->
         <!-- <div class="stack-overflow">
           <i class="fa-brands fa-stack-overflow"></i>
         </div> -->
@@ -372,7 +359,7 @@
     </aside>
     <div id="content-container">
       <!-- <div id="content-container-inner"></div> -->
-      
+
     </div>
     <aside id="right-side__container">
       <ul id="projectType-list" class="project-categories">

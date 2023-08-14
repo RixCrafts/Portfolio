@@ -42,7 +42,7 @@ body {
   font-family: var(--ff-main);
 }
 
-.zero-stats{
+.zero-stats {
   filter: grayscale(100%);
   opacity: .25;
   cursor: none;
@@ -96,21 +96,75 @@ nav {
   justify-content: space-between;
 }
 
-.header__item-container,
-.picture-container {
-  flex-basis: 30vw;
-}
+
 
 /* Picture */
+.menu-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.picture-container .picture-path-group {
+.menu-container svg {
+  position: relative;
+  flex-basis: 45%;
+  z-index: 0;
+}
+
+.menu-container .menu-path-group {
   fill: none;
   stroke-width: 10px;
   stroke: var(--clr-neonBlue);
 }
 
+#menu-btn {
+  /* outline: 1px solid red; */
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: var(--clr-neonBlue);
+  border: none;
+  /* border-radius: 10px; */
+  box-shadow: 0 0 10px var(--clr-neonBlue);
+  /* transition: transform linear 500ms; */
+  animation: menu-btn-anim 3000ms linear infinite;
+}
+
+#menu-btn::before,
+#menu-btn::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  background-color: var(--clr-neonBlue);
+}
+
+#menu-btn::before {
+  top: -6px;
+}
+
+#menu-btn::after {
+  top: 7px;
+}
+
+@keyframes menu-btn-anim {
+
+  0%,
+  100% {
+    transform: translateY(-15px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+}
+
 @media screen and (min-width:600px) {
-  .picture-container {
+  .menu-container {
     flex-basis: 20vw;
     align-self: flex-start;
   }
@@ -121,9 +175,7 @@ nav {
 
 .header__item-container {
   /* outline: 1px solid white; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
 }
 
 .contact-links {
@@ -150,65 +202,19 @@ nav {
   transform: scale(1.2);
 }
 
-.left-menu__container,
-.right-menu__container {
-  width: 4rem;
-}
-
-.left-menu,
-.right-menu {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--clr-neonBlue);
-  /*font-family: var(--ff-main);*/
-  font-size: .75rem;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: 2.5px;
-  border-top: 2px;
-  border-bottom: 2px;
-  border-left: 0;
-  border-right: 0;
-  border-style: solid;
-  border-top-color: var(--clr-neonBlue);
-  border-bottom-color: var(--clr-neonBlue);
-}
-
-.left-menu>span,
-.right-menu>span {
-  margin-top: 3px;
-  text-align: center;
-}
-
-.left-menu::before,
-.left-menu::after,
-.right-menu::before,
-.right-menu::after {
-  content: "";
-  text-align: center;
-  width: 100%;
-  height: .5rem;
-  position: absolute;
-  background: var(--clr-neonBlue);
-}
-
-.left-menu::before,
-.right-menu::before {
-  top: -.75rem;
-  border-radius: 50px 50px 0 0;
-}
-
-.left-menu::after,
-.right-menu::after {
-  top: 1.25rem;
-  border-radius: 0 0 5px 5px;
-}
 
 @media screen and (min-width: 600px) {
-  .left-menu__container {
-    display: none;
+
+  .header__item-container,
+  .menu-container {
+    flex-basis: 30vw;
+  }
+
+  .header__item-container {
+    /* outline: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact-links {
@@ -418,65 +424,24 @@ main {
     0 -5px 5px var(--clr-ligthBlue);
 }
 
-/* ------------------------------- Stats ------------------------------------------- */
-#stats-container {
-  display: flex;
-  justify-content: center;
-}
-
-#external-chart {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  background: conic-gradient(var(--clr-js) 0.00% 25.00%, var(--clr-react) 25.00% 50.00%, var(--clr-csharp) 50.00% 75.00%, var(--clr-python) 75.00% 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#chart-separator {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  background: var(--clr-mainBackground);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#internal-chart {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  background: conic-gradient(rgb(0, 173, 242) 0.00% 40.00%, rgb(0, 255, 132) 40.00% 70.00%, rgb(208, 255, 0) 70.00%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#central-space {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background: var(--clr-mainBackground);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#rol p:last-child {
+  position: relative;
+  z-index: 100;
 }
 
 /* ----------------------------------------------------------------------------------- */
 
-/* ---------------------- Stats Temporal Visual Widget ----------------------------- */
+/* ---------------------- Picture Visual Widget ----------------------------- */
 
-#stats-temp-visualWidget__container,
-#stats-temp-visualWidget__inner-container {
+#myPicture-visualWidget__container,
+#myPicture-visualWidget__inner-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-#stats-temp-visualWidget__inner-container {
+#myPicture-visualWidget__inner-container {
   width: 9rem;
   height: 9rem;
 }
@@ -487,7 +452,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: .5;
+  opacity: 1;
 }
 
 #visualWidget-1,
@@ -616,6 +581,12 @@ main {
   }
 }
 
+#myPicture {
+  position: absolute;
+  opacity: .75;
+  border-radius: 10% 10% 50% 50%;
+}
+
 /* --------------------------------------------------------------------------------- */
 
 /* ------------------------------ About me  ---------------------------------- */
@@ -690,18 +661,18 @@ main {
   border-radius: 10px 10px 0 10px;
 } */
 
-fieldset{
+fieldset {
   border-color: var(--clr-ligthBlue);
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
-legend{
+legend {
   font-size: 1.25rem;
   /* width: 100%; */
 }
 
-.certifications{
+.certifications {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -709,12 +680,12 @@ legend{
   flex-direction: column;
 }
 
-.certifications hr{
+.certifications hr {
   width: 30%;
   margin: 1rem 0
 }
 
-.certifications a{
+.certifications a {
   text-decoration: none;
   color: #fff;
   text-align: center;
@@ -727,7 +698,7 @@ legend{
 
 .sololearn-cert,
 #sololearn-svg1,
-#sololearn-logo{
+#sololearn-logo {
   display: flex;
   justify-content: center;
   align-items: center;
