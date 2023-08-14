@@ -2,6 +2,9 @@
 
 ## Colors
 
+- Main Background Color: `--clr-mainBackground: hsla(244, 31%, 10%, 1);`
+- Neon Blue: `--clr-neonBlue: hsl(205, 100%, 53%);`
+- Ligth Blue: `--clr-ligthBlue: hsl(205, 100%, 80%);`
 - HTML Orange Color: `--clr-html: #f06529`
 - CSS Blue Color: `--clr-css: #264de4`
 - JavaScript Yellow Color: `--clr-js: #f7df1e`

@@ -15,3 +15,48 @@ body.onscroll = event => {
     navBar.classList.remove("small-nav");
   }
 }
+
+// Menu functionality
+
+const menuBtn = document.querySelector('#menu-btn');
+menuBtn.addEventListener('click', event => {
+  document.querySelector('.menu-slide').style.left = "-5vw";
+  activateMenu();
+});
+
+const menuCloseBtn = document.querySelector('.close-menu-btn');
+menuCloseBtn.addEventListener('click', event => {
+  document.querySelector('.menu-slide').style.left = "-105vw";
+  deactivateMenu();
+});
+
+function activateMenu(){
+  console.info("Activating Menu");
+  
+  const menuLinks = document.querySelectorAll(".menu-slide__content-container ul li");
+
+  menuLinks.forEach(element => {
+    element.addEventListener('click', event => {
+      document.querySelector('.menu-slide').style.left = "-105vw";
+      console.info("Action accomplished");
+      deactivateMenu();
+    });
+  });
+
+  console.info("Menu Activated");
+}
+
+function deactivateMenu(){
+  console.info("Deactivating Menu");
+
+  const menuLinks = document.querySelectorAll(".menu-slide__content-container ul li");
+
+  menuLinks.forEach(element => {
+    element.removeEventListener('click', event => {
+      document.querySelector('.menu-slide').style.left = "-105vw";
+      console.info("Action accomplished");
+    });
+  });
+
+  console.log("Menu Deactivated")
+}
