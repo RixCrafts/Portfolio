@@ -9,6 +9,8 @@
 - C# Violet Color: `--clr-csharp: #682876`
 - Python blue: `--clr-python: #f06529`
 
+- Linkedin blue: `--clr-linkedin: rgb(10, 102, 194)`
+
 ## Certifications links
 
 ### freeCodeCamp

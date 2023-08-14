@@ -3,6 +3,7 @@
   --clr-neonBlue: hsl(205, 100%, 53%);
   --clr-ligthBlue: hsl(205, 100%, 80%);
   --clr-orange: hsla(33, 100%, 50%, 1);
+  --clr-linkedin: rgb(10, 102, 194);
 
   --ff-main: 'Trebuchet MS',
     'Lucida Sans Unicode',
@@ -87,13 +88,14 @@ header {
 
 nav {
   width: 100vw;
-  height: 100%;
-  position: relative;
-  top: 0;
-  padding-top: 10px;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  padding-top: 2px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
 }
 
 
@@ -102,10 +104,23 @@ nav {
 .menu-container {
   position: relative;
   width: 100%;
-  height: 100%;
+  top: -20px;
+  /* height: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all linear 250ms;
+}
+
+/* TODO: Insert this class with JS to shrink when scroll down */
+.small-nav{
+  background: linear-gradient(0deg, transparent 0 30%, hsla(205, 100%, 53%, 0.521), transparent 80%);
+}
+
+.small-menu{
+  width: 50%;
+  top: 0;
+  
 }
 
 .menu-container svg {
@@ -144,7 +159,7 @@ nav {
 }
 
 #menu-btn::before {
-  top: -6px;
+  top: -7px;
 }
 
 #menu-btn::after {
@@ -444,6 +459,7 @@ main {
 #myPicture-visualWidget__inner-container {
   width: 9rem;
   height: 9rem;
+  top: 30px;
 }
 
 .inner-visualWidget {
@@ -583,6 +599,7 @@ main {
 
 #myPicture {
   position: absolute;
+  top: 0;
   opacity: .75;
   border-radius: 10% 10% 50% 50%;
 }
@@ -641,6 +658,18 @@ main {
   border-radius: 0 10px 10px 0;
 }
 
+.linkedin-container i{
+  color: var(--clr-linkedin);
+}
+
+.twitter-container i{
+  color: #fff;
+}
+
+.mail-container i{
+  color: #aaa;
+}
+
 .connect-container i,
 .colab-container i,
 .belt i {
@@ -652,6 +681,10 @@ main {
   border-left: 1px solid var(--clr-ligthBlue);
   border-bottom: 1px solid var(--clr-ligthBlue);
   border-radius: 10px 0 0 10px;
+}
+
+.github-container i{
+  color: #fff;
 }
 
 /* .belt {
