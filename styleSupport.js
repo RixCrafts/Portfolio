@@ -7,7 +7,7 @@ body.onscroll = event => {
   console.log(window.scrollY);
   const navBtn = document.querySelector('.menu-container');
   const navBar = document.querySelector('nav'); 
-  if(window.scrollY > 20){
+  if(window.scrollY > 10){
     navBtn.classList.add("small-menu");
     navBar.classList.add("small-nav");
 
