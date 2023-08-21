@@ -21,4 +21,6 @@ This is my web developer portfolio, and by showing it, I introduce myself and I 
 - [ ] Update the catalog to work with the filter
 
 
+## Attributions
 
+- (Check Icon)[https://www.flaticon.com/free-icons/tick]

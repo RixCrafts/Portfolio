@@ -425,7 +425,8 @@ main {
 }
 
 fieldset {
-  border-color: var(--clr-ligthBlue);
+  padding: 1.5rem;
+  border: 3px solid var(--clr-ligthBlue);
   border-radius: 10px;
   margin: 1rem;
 }
@@ -466,6 +467,28 @@ legend {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.topics-container ul {
+  list-style: none;
+  line-height: 5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.topics-container ul li {
+  display: flex;
+  align-items: center;
+}
+
+.topics-container ul li>img {
+  width: 50px;
+  margin-right: 5px;
 }
 
 /* -------- Coding Sites --------- */
@@ -560,9 +583,94 @@ legend {
   display: flex;
 }
 
+/* ---------------------------------------------------- */
 
+#project-gallerie,
+.gallerie-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+#project-gallerie,
+.gallerie-container,
+.gallerie-set {
+  padding: .25rem;
+}
 
+.gallerie-container{
+  flex-direction: column;
+}
+
+.gallerie-set {
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gallerie-item-img>img {
+  width: 100%;
+  padding: .25rem;
+}
+
+.gallerie-item-content {
+  margin: .25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.project-title {
+  color: var(--clr-orange);
+  /* text-align: center; */
+  text-shadow:
+    1px 0 5px var(--clr-mainBackground),
+    0 1px 5px var(--clr-mainBackground),
+    -1px 0 5px var(--clr-mainBackground),
+    0 -1px 5px var(--clr-mainBackground),
+    2px 0 10px var(--clr-neonBlue),
+    0 2px 10px var(--clr-neonBlue),
+    -2px 0 10px var(--clr-neonBlue),
+    0 -2px 10px var(--clr-neonBlue),
+    6px 0 15px var(--clr-ligthBlue),
+    0 6px 15px var(--clr-ligthBlue),
+    -6px 0 15px var(--clr-ligthBlue),
+    0 -6px 15px var(--clr-ligthBlue);
+}
+
+.project-type {
+  /* text-align: center; */
+  font-weight: 400;
+  opacity: .5;
+  line-height: 1.75rem;
+}
+
+.project-description {
+  margin: 1rem;
+  overflow-y: scroll;
+}
+
+.tags-container ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tags-container ul li{
+  font-size: .75rem;
+  font-weight: 600;
+  margin: .5rem;
+  background-color: #555;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+
+/* ----------------------------------------------------- */
 
 /* ------ Footer ------ */
 

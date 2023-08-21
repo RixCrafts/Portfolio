@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Frontend Mentor Repo",
+    "descrip": "Repo of all my projects for Frontend Mentor",
+    "type": "vanilla",
+    "category": "web",
+    "tags": ["html", "css", "js"],
+    "preview": "#",
+    "url": "#"
+  },
+  {
+    "name": "freeCodeCamp Repo",
+    "descrip": "Repo of all my projects for freeCodeCamp",
+    "type": "vanilla",
+    "category": "web",
+    "tags": ["html", "css", "js"],
+    "preview": "#",
+    "url": "#"
+  },
+  {
+    "name": "Scrimba Repo",
+    "descrip": "Repo of all my projects for Scrimba",
+    "type": "vanilla",
+    "category": "web",
+    "tags": ["html", "css", "js"],
+    "preview": "#",
+    "url": "#"
+  },
+  {
+    "name": "RixDev Blog",
+    "descrip": "Blog and journey logs on my developmer path",
+    "type": "vanilla",
+    "category": "web",
+    "tags": ["html", "css", "js"],
+    "preview": "#",
+    "url": "#"
+  }
+  
+]

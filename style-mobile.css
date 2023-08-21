@@ -208,6 +208,10 @@ main {
   font-size: 1.25rem;
 }
 
+.topics-container ul li > img{
+  width: 10%;
+}
+
 
 /* -------- CODING SITES --------- */
 
@@ -259,9 +263,36 @@ main {
   color: var(--clr-ligthBlue);
 }
 
-/* #project-gallerie{
-  min-height: 80vh;
-} */
+.gallerie-set{
+  border: 0;
+  flex-direction: column;
+  background: linear-gradient(180deg, #0f9bff 0% 30%, transparent 95% 100%);
+}
+
+#desktop-link{
+  display: none;
+}
+
+.visit-link i {
+  color: var(--clr-ligthBlue);
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.gallerie-item-img>img {
+  border-right: 2px solid #0f9bff;
+  border-top: 1px solid #0f9bff;
+  border-bottom: 1px solid #0f9bff;
+  border-radius: 5px 20px 20px 5px;
+}
+
+.project-title{
+  font-size: 1.5rem;
+}
+
+.project-description {
+  max-height: 5rem;
+}
 
 /* ---------- Project Collection --------- */
 #content-container {
