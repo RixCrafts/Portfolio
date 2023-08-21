@@ -84,7 +84,7 @@ nav {
 }
 
 .small-nav {
-  top: 70px;
+  top: 0px;
   background: linear-gradient(0deg, transparent 0 30%, hsla(205, 100%, 53%, 0.521), transparent 80%);
 }
 
