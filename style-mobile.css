@@ -234,7 +234,7 @@ main {
   border-top: 0;
   border-radius: 0 0 10px 10px;
 }
-
+/* 
 #left-side__container,
 #right-side__container {
   display: flex;
@@ -292,13 +292,12 @@ main {
 
 .project-description {
   max-height: 5rem;
-}
+} */
 
 /* ---------- Project Collection --------- */
-#content-container {
-  /* background-color: #30395d; */
+/* #content-container {
   grid-column: 1 / span 3;
   grid-row: 4;
   max-height: 80vh;
   overflow-y: scroll;
-}
+} */

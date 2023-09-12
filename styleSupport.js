@@ -1,5 +1,5 @@
 // Set up
-window.screenY = 0
+window.scrollY = 0
 
 let body = document.querySelector('body');
 console.log(body);

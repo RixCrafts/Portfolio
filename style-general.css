@@ -461,6 +461,19 @@ legend {
 
 }
 
+.certifications a > div{
+  background-color: var(--clr-mainBackground);
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.certifications a>div .fa-plus{
+  opacity: .5;
+  font-size: 1em;
+}
+
 .sololearn-cert,
 #sololearn-svg1,
 #sololearn-logo {
@@ -575,16 +588,17 @@ legend {
   justify-content: center;
   grid-column: 1 / span 3;
   grid-row: 3;
+  overflow-y: scroll;
 }
-
+/* 
 #tech-list,
 #projectType-list {
   list-style: none;
   display: flex;
-}
+} */
 
 /* ---------------------------------------------------- */
-
+/* 
 #project-gallerie,
 .gallerie-container {
   display: flex;
@@ -625,7 +639,6 @@ legend {
 
 .project-title {
   color: var(--clr-orange);
-  /* text-align: center; */
   text-shadow:
     1px 0 5px var(--clr-mainBackground),
     0 1px 5px var(--clr-mainBackground),
@@ -642,7 +655,6 @@ legend {
 }
 
 .project-type {
-  /* text-align: center; */
   font-weight: 400;
   opacity: .5;
   line-height: 1.75rem;
@@ -668,7 +680,7 @@ legend {
   background-color: #555;
   padding: 5px 10px;
   border-radius: 50px;
-}
+} */
 
 /* ----------------------------------------------------- */
 
