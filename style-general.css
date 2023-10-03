@@ -590,6 +590,19 @@ legend {
   grid-row: 3;
   overflow-y: scroll;
 }
+
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box img{
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
 /* 
 #tech-list,
 #projectType-list {

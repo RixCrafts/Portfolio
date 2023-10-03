@@ -20,6 +20,7 @@ nav {
 
 .nav-bg {
   background: linear-gradient(0deg, transparent 0 10%, hsl(205, 100%, 53%), transparent 20% 80%, hsl(205, 100%, 53%), transparent 90%);
+  backdrop-filter: blur(5px);
 }
 
 /* ------------- Sides ---------- */
@@ -30,14 +31,19 @@ nav {
   align-items: center;
 }
 
+
+.contact-links,
+.pageLink-list{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .contact-links {
   list-style: none;
   padding: 0;
   width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .link-icon i {
@@ -58,7 +64,7 @@ nav {
 }
 
 .pageLink-list {
-  width: 100%;
+  width: 80%;
   height: 100%;
   padding: 0;
   /* display: none; */
@@ -71,40 +77,16 @@ nav {
   transition: transform linear 150ms;
 }
 
-.pageLink-item+.pageLink-item {
-  margin-left: 1.5em;
-}
 
 .pageLink-item a {
   text-decoration: none;
   color: var(--clr-neonBlue);
 }
 
-/* .pageLink-item:hover {
+.pageLink-item:hover {
   transform: scale(1.2);
-  text-shadow:
-    5px 0 5px var(--clr-orange),
-    0 5px 5px var(--clr-orange),
-    -5px 0 5px var(--clr-orange),
-    0 -5px 5px var(--clr-orange);
   font-weight: 700;
-} */
-
-/* .pageLink-item:hover a>b {
-  text-shadow:
-    5px 0 5px var(--clr-neonBlue),
-    0 5px 5px var(--clr-neonBlue),
-    -5px 0 5px var(--clr-neonBlue),
-    0 -5px 5px var(--clr-neonBlue);
 }
-
-.pageLink-item:hover span {
-  text-shadow:
-    5px 0 5px hsl(229, 97%, 25%),
-    0 5px 5px var(--clr-neonBlue),
-    -5px 0 5px hsl(229, 97%, 25%),
-    0 -5px 5px var(--clr-neonBlue);
-} */
 
 .pageLink-item b {
   color: var(--clr-orange);
@@ -114,6 +96,23 @@ nav {
   border: 2px solid var(--clr-ligthBlue);
   border-radius: 10px;
   padding: 5px;
+}
+
+@media screen and (max-width: 950px) {
+  .header__item-container {
+    flex-basis: unset;
+    justify-content: space-around;
+    width: 40%;
+  }
+
+  nav {
+    justify-content: space-around;
+  }
+
+  .pageLink-list,
+  .contact-links {
+    width: 100%;
+  }
 }
 
 /* ---------- Main -------- */
@@ -447,8 +446,8 @@ main {
 .box {
   background-color: #1d2338;
   border: 5px solid #3b3e49;
-  min-width: 300px;
-  min-height: 200px;
+  width: 300px;
+  height: 200px;
   border-radius: 25px;
   transition: all ease 250ms;
 }

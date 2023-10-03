@@ -4,9 +4,9 @@
 Greetings fellow humans, my name is Richard.
 This is my web developer portfolio, and by showing it, I introduce myself and I intend to enter a path that allows me to contribute to the advancement of society.
 
-**Let's become inmortal together**
+**Let's become immortal together**
 
-## TODO
+## TODO's
 
 - [x] Delete the current menu icons in the header
 - [ ] Create the style to allow the `menu container` from the header to be fixed when tha page is scrolled down, modifying the header botton border
@@ -24,3 +24,17 @@ This is my web developer portfolio, and by showing it, I introduce myself and I 
 ## Attributions
 
 - (Check Icon)[https://www.flaticon.com/free-icons/tick]
+
+** Projects on the collection
+
+| Name | Platform | Tech Stack |
+| ---- | -------- | ---------- |
+| Tribute Page | Website | ReactJS |
+| RixDev_BLog | Blog | Vanilla JS |
+| React UI Library | Website | ReactJS |
+| Global Markets Monitor | Website + App | ReactJS + React Native |
+| Technical Docs | Website | Blazor |
+| SupplyPrism | E-Com + Blog | ReactJS |
+| Photography services | Website | React + Tailwind |
+| Driving Theory | Website | Blazor |
+| RixDev_Game'sHub | Website + App | Multi-platform App with React Native, MAUI &| 

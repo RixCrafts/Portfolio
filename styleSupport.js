@@ -6,16 +6,17 @@ console.log(body);
 
 // Nav bar - mobile: Middle btn shrink when scroll
 
-body.onscroll = event => {
+body.onscroll = () => {
+  console.log(window.pageYOffset);
   console.log(window.scrollY);
   const navBtn = document.querySelector('.menu-container');
-  const navBar = document.querySelector('nav'); 
-  if(window.scrollY > 10){
+  const navBar = document.querySelector('nav');
+  if (window.scrollY > 10 || window.pageYOffset > 10) {
     navBtn.classList.add("small-menu");
     navBar.classList.add("small-nav");
 
     navBar.classList.add('nav-bg');
-  }else{
+  } else {
     navBtn.classList.remove("small-menu");
     navBar.classList.remove("small-nav");
 
@@ -37,9 +38,9 @@ menuCloseBtn.addEventListener('click', event => {
   deactivateMenu();
 });
 
-function activateMenu(){
+function activateMenu() {
   console.info("Activating Menu");
-  
+
   const menuLinks = document.querySelectorAll(".menu-slide__content-container ul li");
 
   menuLinks.forEach(element => {
@@ -53,7 +54,7 @@ function activateMenu(){
   console.info("Menu Activated");
 }
 
-function deactivateMenu(){
+function deactivateMenu() {
   console.info("Deactivating Menu");
 
   const menuLinks = document.querySelectorAll(".menu-slide__content-container ul li");
